@@ -16,5 +16,6 @@ body {
   background-position: center;
   background-size: cover;
   height: 100vh;
+  color: #333;
   font-family: 'Roboto Condensed', sans-serif;
 }
