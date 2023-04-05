@@ -1,0 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../currencies.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  font-family: 'Roboto Condensed', sans-serif;
+}
