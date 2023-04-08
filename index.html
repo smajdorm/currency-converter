@@ -27,11 +27,11 @@
   <body>
     <div class="container">
       <h1 class="title">Currency Converter</h1>
-      <form class="form">
+      <form class="form js-form">
         <label class="form__label">
           <span class="form__text">Amount:</span>
           <input
-            class="form__field"
+            class="form__field js-amount"
             type="number"
             step="0.01"
             placeholder="Owned currency amount"
@@ -48,6 +48,9 @@
         </label>
         <button class="form__submit">Convert</button>
       </form>
+      <div class="info">
+        <span class="info__result js-result"></span>
+      </div>
     </div>
   </body>
 </html>
