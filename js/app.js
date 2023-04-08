@@ -1,12 +1,14 @@
 import { fetchCurrencies } from './fetchCurrencies.js';
 
 async function init() {
-  const currencyEls = document.querySelectorAll('.js-currency');
+  const convertFromEl = document.querySelector('.js-convert-form');
+  const convertToEl = document.querySelector('.js-convert-to');
 
   const currencies = await fetchCurrencies();
-  Object.entries(currencies).forEach(curr =>
-    currencyEls.forEach(el => el.appendChild(createOptionEl(curr)))
-  );
+  Object.entries(currencies).forEach(curr => {
+    convertFromEl.appendChild(createOptionEl(curr));
+    convertToEl.appendChild(createOptionEl(curr));
+  });
 }
 
 function createOptionEl(curr) {
