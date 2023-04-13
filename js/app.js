@@ -3,6 +3,11 @@ import { fetchCurrencies } from './fetchCurrencies.js';
 const formEl = document.querySelector('.js-form');
 const convertFromEl = document.querySelector('.js-convert-from');
 const convertToEl = document.querySelector('.js-convert-to');
+const clockEl = document.querySelector('.js-clock');
+
+setInterval(() => {
+  clockEl.innerText = `Today is ${new Date().toLocaleString()}`;
+}, 1000);
 
 const currencies = await fetchCurrencies();
 Object.entries(currencies).forEach(curr => {

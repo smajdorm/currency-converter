@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+@media (max-width: 767px) {
+  .header {
+    flex-direction: column-reverse;
+    align-items: unset;
+    width: 100%;
+  }
+}
+
+.header__title {
+  margin: 16px 0;
+}
+
+.header__clock {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+}
