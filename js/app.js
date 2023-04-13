@@ -16,11 +16,14 @@ async function init() {
   formEl.addEventListener('submit', e => {
     e.preventDefault();
 
-    resultEl.innerText = `${amountEl.value} ${
+    resultEl.innerHTML = `${amountEl.value} <strong>${
       convertFromEl.options[convertFromEl.selectedIndex].text
-    } = ${((amountEl.value / convertFromEl.value) * convertToEl.value).toFixed(
-      2
-    )} ${convertToEl.options[convertToEl.selectedIndex].text}`;
+    }</strong> = ${(
+      (amountEl.value / convertFromEl.value) *
+      convertToEl.value
+    ).toFixed(2)} <strong>${
+      convertToEl.options[convertToEl.selectedIndex].text
+    }</strong>`;
   });
 }
 
